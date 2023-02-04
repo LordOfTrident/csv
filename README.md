@@ -13,7 +13,7 @@
 	<br><br><br>
 </p>
 
-A simple single-header [STB-style](https://github.com/nothings/stb) stringview library for C.
+A simple single-header [STB-style](https://github.com/nothings/stb) [string view](https://en.cppreference.com/w/cpp/string/basic_string_view) library for C.
 
 ## Table of contents
 * [Simple example](#simple-example)
