@@ -47,7 +47,7 @@ To compile and run the examples, run
 ```sh
 $ cc ./examples/trim.c -o trim
 $ cc ./examples/find.c -o find
-$ ./sv
+$ ./trim
 $ ./find
 ```
 
