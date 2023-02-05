@@ -1,3 +1,5 @@
+/* #define CSV_IMPLEMENTATION */
+
 #ifndef CSV_HEADER_GUARD
 #define CSV_HEADER_GUARD
 
