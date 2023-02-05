@@ -4,6 +4,10 @@
 #include <string.h>  /* strlen */
 #include <stdbool.h> /* bool, true, false */
 
+#define CSV_VERSION_MAJOR 1
+#define CSV_VERSION_MINOR 0
+#define CSV_VERSION_PATCH 0
+
 typedef struct {
 	size_t      len;
 	const char *cstr;
