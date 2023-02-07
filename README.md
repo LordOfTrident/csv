@@ -40,8 +40,8 @@ Output
 <img width="35%" src="res/img.png"/>
 
 ## Quickstart
-Copy [`csv.h`](./csv.h) into your project and include it.
-[See the examples](./examples).
+Copy [`csv.h`](./csv.h) into your project and include it, or submodule this repository and include
+the header. [See the examples](./examples).
 
 To compile and run the examples, run
 ```sh
