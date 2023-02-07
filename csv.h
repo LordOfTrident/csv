@@ -8,12 +8,16 @@
 #ifndef CSV_HEADER_GUARD
 #define CSV_HEADER_GUARD
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <string.h>  /* strlen */
 #include <stdbool.h> /* bool, true, false */
 
 #define CSV_VERSION_MAJOR 1
-#define CSV_VERSION_MINOR 0
-#define CSV_VERSION_PATCH 0
+#define CSV_VERSION_MINOR 1
+#define CSV_VERSION_PATCH 1
 
 typedef struct {
 	size_t      len;
@@ -53,9 +57,17 @@ size_t sv_find_last_not( sv_t sv, char ch);
 bool   sv_contains_substr(sv_t sv, sv_t substr);
 size_t sv_find_substr(    sv_t sv, sv_t substr);
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif
 
 #ifdef CSV_IMPLEMENTATION
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 bool sv_is_equal(sv_t sv, sv_t to) {
 	size_t len = sv.len > to.len? sv.len : to.len;
@@ -75,6 +87,8 @@ bool sv_has_prefix(sv_t sv, sv_t prefix) {
 		if (sv_at(sv, i) != sv_at(prefix, i))
 			return false;
 	}
+
+	return true;
 }
 
 bool sv_has_suffix(sv_t sv, sv_t suffix) {
@@ -85,6 +99,8 @@ bool sv_has_suffix(sv_t sv, sv_t suffix) {
 		if (sv_at(sv, i) != sv_at(suffix, i))
 			return false;
 	}
+
+	return true;
 }
 
 sv_t sv_substr(sv_t sv, size_t start, size_t len) {
@@ -218,5 +234,10 @@ size_t sv_find_substr(sv_t sv, sv_t substr) {
 
 	return SV_NPOS;
 }
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
